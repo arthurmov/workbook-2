@@ -7,7 +7,7 @@ public class FullNameApplication {
         Scanner scanner = new Scanner(System.in);
 
         //get all known values
-        System.out.println("Please enter your name: ");
+        System.out.println("Please enter your name.");
 
         System.out.print("First name: ");
         String firstName = scanner.nextLine().trim();
@@ -18,7 +18,7 @@ public class FullNameApplication {
         System.out.print("Last name: ");
         String lastName = scanner.nextLine().trim();
 
-        System.out.print("Suffix: (Mr./Ms./Mrs.)");
+        System.out.print("Suffix: ");
         String suffix = scanner.nextLine().trim();
 
 
