@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
+
+        //initializing test scores array and needed variables
         int[] testScores = {65,76,87,92,35,64,78,34,78,23};
 
         double average = averageScore(testScores);
@@ -21,6 +23,7 @@ public class Main {
         System.out.println("The difference between the average and median is " + diffBetweenAverageAndMedian);
     }
 
+    //method to find the average score
     public static double averageScore(int[] testScores) {
         int scores = 0;
         for(int i = 0; i < testScores.length; i++) {
@@ -30,6 +33,7 @@ public class Main {
         return average;
     }
 
+    //method to find the highest score
     public static double highScore(int[] testScores) {
         int highest = 0;
         for(int i = 0; i < testScores.length; i++) {
@@ -41,6 +45,7 @@ public class Main {
         return highest;
     }
 
+    //method to find the lowest score
     public static double lowScore(int[] testScores) {
         int lowest = testScores[0];
         for(int i = 0; i < testScores.length; i++) {
@@ -52,6 +57,7 @@ public class Main {
         return lowest;
     }
 
+    //method to find the median
     public static double medianScore(int [] testScores) {
         Arrays.sort(testScores);
         double median;
