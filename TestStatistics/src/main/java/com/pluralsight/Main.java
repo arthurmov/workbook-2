@@ -37,9 +37,8 @@ public class Main {
     public static double highScore(int[] testScores) {
         int highest = 0;
         for(int i = 0; i < testScores.length; i++) {
-            int pointer = testScores[i];
-            if(pointer > highest) {
-                highest = pointer;
+            if(testScores[i] > highest) {
+                highest = testScores[i];
             }
         }
         return highest;
@@ -49,9 +48,8 @@ public class Main {
     public static double lowScore(int[] testScores) {
         int lowest = testScores[0];
         for(int i = 0; i < testScores.length; i++) {
-            int pointer = testScores[i];
-            if(pointer < lowest) {
-                lowest = pointer;
+            if(testScores[i] < lowest) {
+                lowest = testScores[i];
             }
         }
         return lowest;
