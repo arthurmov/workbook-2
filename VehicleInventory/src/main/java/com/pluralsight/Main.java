@@ -83,11 +83,46 @@ public class Main {
     }
 
     public static void findVehiclesByPrice() {
+        float userInput;
 
+        System.out.println("Enter the Price Range that you're searching for: ");
+        userInput = scanner.nextFloat();
+
+        for(int i = 0; i < vehicles.length; i++) {
+
+            if(vehicles[i] != null && userInput == vehicles[i].getPrice()) {
+                System.out.println("\nThe Vehicle you're searching for is: ");
+                System.out.println("\nVehicle ID: " + vehicles[i].getVehicleId());
+                System.out.println("Make/Model: " + vehicles[i].getMakeModel());
+                System.out.println("Color: " + vehicles[i].getColor());
+                System.out.println("Odometer Reading: " + vehicles[i].getOdometerReading());
+                System.out.println("Price: " + vehicles[i].getPrice());
+                break;
+            }
+            else if(vehicles[i] == null) {
+                System.out.println("Unfortunately, we don't have a vehicle in that price range.");
+                break;
+            }
+        }
     }
 
     public static void findVehiclesByColor() {
+        String userInput;
 
+        System.out.println("Enter the Color that you're searching for: ");
+        userInput = scanner.nextLine();
+
+        for(int i = 0; i < vehicles.length; i++) {
+
+            if(vehicles[i] != null && userInput.equalsIgnoreCase(vehicles[i].getColor())) {
+                System.out.println("\nThe Vehicle you're searching for is: ");
+                System.out.println("\nVehicle ID: " + vehicles[i].getVehicleId());
+                System.out.println("Make/Model: " + vehicles[i].getMakeModel());
+                System.out.println("Color: " + vehicles[i].getColor());
+                System.out.println("Odometer Reading: " + vehicles[i].getOdometerReading());
+                System.out.println("Price: " + vehicles[i].getPrice());
+            }
+        }
     }
 
     public static void addAVehicle() {
